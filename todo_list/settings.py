@@ -62,10 +62,22 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'URL': 'postgresql://postgres:IzRUumLJcYI5GgfjNDbZ@containers-us-west-84.railway.app:7922/railway',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'IzRUumLJcYI5GgfjNDbZ',
+        'HOST': 'containers-us-west-84.railway.app',
+        'PORT': 7922,
     }
 }
 
