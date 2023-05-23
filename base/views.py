@@ -1,22 +1,15 @@
-from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView
-from django.contrib.sites.shortcuts import get_current_site
 from django.http import HttpResponseRedirect
-from django.shortcuts import redirect, render
-from django.template.loader import render_to_string
+from django.shortcuts import redirect
 from django.urls import reverse_lazy, reverse
-from django.utils.encoding import force_bytes
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.views import View
 from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView, FormView
-from base.tokens import account_activation_token
 
 from base.models import Task
-from base.tokens import account_activation_token
+
+
 # from django.utils.encoding import force_text
 
 #
